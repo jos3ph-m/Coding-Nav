@@ -8,7 +8,9 @@ const Navbar = () => {
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
 
-  useEffect(() => {}, [showLinks]);
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect();
+  }, [showLinks]);
   return (
     <nav>
       <div className="nav-center">
